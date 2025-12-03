@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadades i configuració bàsica -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Títol de la pàgina -->
+    <title>Serveis</title>
+    <!-- Enllaç al fitxer d'estils CSS extern -->
+    <link rel="stylesheet" href="..//css/cssStyle.css">
+
+    <!-- Estils CSS interns per personalitzar elements específics -->
+    <style>
+        /* Enllaços dins de la secció de contingut */
+        .content a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Estils per a la secció de contingut */
+        .content {
+            display: flex; /* Es mostra com a flexbox */
+            flex-direction: column; /* Organitza en columna */
+            justify-content: center; /* Centra verticalment */
+            align-items: center; /* Centra horitzontalment */
+            min-height: 73vh; /* Assegura que ocupi tota l'alçada */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centra el text */
+        }
+
+        /* Estil per al contenedor d'informació del servei */
+        #InformacioServei {
+            width: 100%; /* Ocupa tot l'ample */
+        }
+
+        /* Text dins del contenidor */
+        .text {
+            margin: 10px auto; /* Centra l'element */
+            max-width: 800px; /* Amplada màxima */
+            padding: 10px; /* Espaiat intern */
+            text-align: center; /* Centra el text */
+        }
+
+        /* Estils per a les imatges */
+        img {
+            width: 300px; /* Amplada fixa */
+            height: auto; /* Mantenir la proporció */
+        }
+    </style>
+</head>
+<body id="contenido">
+    <!-- Capçalera de la pàgina -->
+    <header>
+        <!-- Enllaç al portal amb logotip -->
+        <a href="Portal.html">
+            <img id="LogoEmpresa" src="../Imatges/apple-touch-icon.png" alt="LogoEmpresa">
+        </a>
+        <!-- Títol principal -->
+        <a id="title" href="Portal.html" style="font-size: 40px;">TechSwap</a>
+        <h1 style="font-size: 30px;"> Serveis</h1>
+    </header>
+
+    <!-- Contenidor principal -->
+    <div id="container">
+        <section class="content">
+            <!-- Informació sobre els serveis -->
+            <div id="InformacioServei" style="text-align: center;">
+                <h2 style="font-size: 30px; padding-bottom: 40px;">Els Nostres Serveis</h2>
+                <p class="text">En la nostra empresa, ens dediquem a oferir serveis tecnològics de màxima qualitat i última generació per satisfer totes les teves necessitats informàtiques. Som especialistes en la compra i venda d'equips informàtics, posant a la teva disposició una àmplia gamma de productes que inclouen ordinadors, servidors, perifèrics i accessoris, sempre amb les últimes novetats tecnològiques del mercat.</p>
+                <p class="text">A més, comptem amb un servei de suport tècnic altament qualificat, preparat per oferir manteniment i reparació de hardware i software. El nostre equip d'experts treballa amb compromís i dedicació per garantir que els teus equips estiguin sempre en òptimes condicions i funcionant sense problemes.</p>     
+                <p class="text" style="margin-bottom: 30px;">Confia en nosaltres per trobar solucions tecnològiques integrals que s'adaptin a les teves necessitats, ja sigui a nivell personal o empresarial. Estem aquí per ajudar-te a optimitzar el teu entorn tecnològic i assegurar-te una experiència excel·lent en cada projecte.</p>
+            </div>
+            <!-- Secció de serveis -->
+            <div class="services" style="margin-bottom: 20px;">
+                <!-- Servei de venda d'equips -->
+                <div class="service">
+                    <li><a href="Serveis/VentaEquips.html">Venta d'equips</a></li>
+                    <p>Ordinadors, servidors, perifèrics, accessoris...</p>
+                    <img src="../Imatges/VentaEquipsImage.jpg" alt="ImageVentaEquips">
+                </div>
+                <!-- Servei de suport tècnic -->
+                <div class="service">
+                    <li><a href="Serveis/SuportTecnic.html">Suport Tècnic</a></li>
+                    <p>Manteniment i reparació de hardware i software.</p>
+                    <img src="../Imatges/SuportTecnicImage.avif" alt="ImageSuportTecnic">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Peu de pàgina -->
+    <footer>
+        <p>© 2025 Empresa Tech - Tots els drets reservats</p>
+    </footer>
+
+    <!-- Enllaç a l'arxiu JavaScript per a animacions -->
+    <script src="../javascript/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Què fem - Oria</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f5f9ff;
+        }
+
+        /* Header */
+        header {
+            background-color: #86b4ff; /* Fondo azul claro */
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        header img {
+            max-height: 50px;
+            width: auto;
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        #title {
+            font-size: 36px;
+            color: #2063e9; /* Título azul fuerte */
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 15px;
+            font-size: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2063e9; /* Azul fuerte */
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Logo de Oria */
+        #LogoOria {
+            display: block;
+            margin: 120px auto 40px auto;
+            max-width: 250px;
+        }
+
+        /* Tarjetas */
+        #TarjetasOria {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #86b4ff;
+            padding: 60px 20px;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            animation: fadeInUp 1s ease forwards;
+            margin-bottom: 40px;
+        }
+
+        .flip-card:hover {
+            transform: scale(1.02);
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front h2,
+        .additional-section h2 {
+            text-align: center;
+            font-size: 22px;
+            color: #2063e9;
+        }
+
+        .flip-card-back p,
+        .flip-card-back ul,
+        .additional-section p,
+        .additional-section ul {
+            font-size: 16px;
+            color: #86b4ff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #86b4ff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            color: white;
+            font-weight: 300;
+        }
+
+        footer p {
+            font-size: 16px;
+            color: #2063e9;
+        }
+
+        /* Scroll to top button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #5591ff;
+        }
+
+        /* Animación de entrada al hacer scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sección adicional */
+        .additional-section {
+            background-color: #e3f0ff;
+            padding: 60px 20px;
+            margin-bottom: 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .additional-section p,
+        .additional-section ul {
+            font-size: 16px;
+            color: #86b4ff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .flip-card {
+                width: 90%;
+                height: auto;
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="Portal.html">
+            <img src="../../img/Logo_EchoMind-SinFondo.png" alt="Logo EchoMind">
+        </a>
+        <p id="title">Oria</p>
+        <nav>
+            <a href="./Portal.html">Inici</a>
+        </nav>
+    </header>
+
+    <img style="padding-bottom: 70px;" id="LogoOria" src="../../img/Logo_Oria.png" alt="Logo Oria">
+
+    <!-- SECCIÓN MODERNA DE TARJETAS -->
+    <div id="TarjetasOria">
+        <!-- Tarjeta 1 -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Què és Oria?</h2>
+                </div>
+                <div class="flip-card-back">
+                    <p>Oria és el nostre projecte acadèmic. És un assistent virtual que t’ajuda amb el teu equip informàtic.</p>
+                    <ul>
+                        <li>Obre programes com Google, Youtube, Spotify...</li>
+                        <li>Escriu el que li dictes</li>
+                        <li>Controla el volum</li>
+                        <li>Apagar, reiniciar o tancar sessió</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Com funciona Oria?</h2>
+                </div>
+                <div class="flip-card-back">
+                    <p>Està programada amb Python, HTML, CSS i JavaScript. Funciona amb comandes per veu: "Oria [acció]".</p>
+                    <p>Si hi ha algun error, Oria t'ho farà saber amb un missatge personalitzat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="additional-section fade-in" id="section-1">
+        <h2>Per què triar Oria?</h2>
+        <p>Oria és més que un simple assistent. Et pot ajudar a organitzar la teva feina i fer-la més eficient, amb un disseny net i fàcil d'usar.</p>
+    </div>
+
+    <div class="additional-section fade-in" id="section-2">
+        <h2>Quins són els avantatges d'usar Oria?</h2>
+        <ul>
+            <li>Eficiència: Automatitza tasques repetitives.</li>
+            <li>Integració amb múltiples aplicacions.</li>
+            <li>Fàcil de configurar i utilitzar.</li>
+        </ul>
+    </div>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <p>© 2025 EchoMind - Tots els drets reservats</p>
+    </footer>
+
+    <script>
+        // Función para mostrar elementos al hacer scroll
+        window.addEventListener("scroll", function () {
+            const fadeInElements = document.querySelectorAll(".fade-in");
+            fadeInElements.forEach(function (el) {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add("visible");
+                }
+            });
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>

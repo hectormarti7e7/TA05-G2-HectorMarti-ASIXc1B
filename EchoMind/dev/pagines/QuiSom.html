@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui som?</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+
+        #fundadors {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .fundador {
+            flex: 1;
+            text-align: center;
+        }
+
+        .fundador h1 {
+            font-size: 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+            transition: background 0.3s;
+        }
+
+        .fundador h1:hover {
+            text-decoration: underline;
+        }
+
+        .info {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+
+        .info.show {
+            max-height: 600px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .fundador img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="Portal.html">
+            <img id="LogoEmpresa" src="../../img/Logo_EchoMind-SinFondo.png" alt="Logo EchoMind">
+        </a>
+        <div>
+            <p id="title">EchoMind</p>
+            <nav>
+                <ul>
+                    <li><a href="./Portal.html">Inici</a></li>
+                    <li><a href="./QueFem.html">Que fem?</a></li>
+                    <li><a href="./OnSom.html">On som?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="ContenidoPrincipal">
+        <p id="subtitle">Qui som?</p>
+        <p>Som una petita empresa creada amb passió i dedicació per dos estudiants en el marc del nostre treball final de síntesi. El nostre objectiu principal és aplicar tot el coneixement adquirit durant els nostres estudis per donar vida a un projecte real, funcional i amb valor afegit.</p>
+        <p>Aquest projecte no només representa una fita acadèmica per a nosaltres, sinó també una oportunitat per posar en pràctica habilitats tècniques, creatives i organitzatives en un entorn el més proper possible a la realitat professional. Ens hem encarregat de tot el procés: des del disseny i la planificació, fins al desenvolupament i execució del projecte.</p>
+        <p>Som conscients de la importància de treballar en equip, afrontar reptes i buscar solucions innovadores. És per això que hem apostat per un enfocament col·laboratiu, on cada decisió ha estat presa amb cura, pensant sempre en oferir una experiència clara, útil i atractiva per a l’usuari final.</p>
+        <p>Tot i ser un projecte acadèmic, l’hem abordat amb la mateixa serietat i compromís amb què afrontaríem un encàrrec professional. Aquest és només el començament del nostre camí, però estem orgullosos del resultat i esperem que gaudiu navegant pel nostre projecte tant com nosaltres hem gaudit creant-lo.</p>
+
+        <p id="subtitle">Fundadors</p>
+        <div id="fundadors">
+            <div class="fundador">
+                <h1 onclick="toggleInfo('hector')">Hector Marti</h1>
+                <div class="info" id="hector">
+                    <img src="../../img/img-Hector-QuiSom.jpg" alt="img-Hector">
+                    <p>Co-propietari de l'empresa. Amb habilitats dins de sistemes i xarxer locals, especialitzat en la programació.</p>
+                </div>
+            </div>
+            <div class="fundador">
+                <h1 onclick="toggleInfo('samuel')">Samuel Anton</h1>
+                <div class="info" id="samuel">
+                    <img src="../../img/img-Samuel-QuiSom.png" alt="img-Samuel">
+                    <p>Co-Propietari de la empresa. Amb habilitats dins de sistemes i xarxes locals. I coneixement en web sobre tot.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 EchoMind - Tots els drets reservats</p>
+    </footer>
+
+    <script>
+        function toggleInfo(id) {
+            const info = document.getElementById(id);
+            info.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que fem</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+
+        /* Especialitzacions */
+        #Especialitzacions {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            width: 90%;
+            /* Increased the width of the main container */
+            margin: 0 auto;
+        }
+
+        .Especialitzat {
+            background: #86b4ff;
+            padding: 25px;
+            border-radius: 8px;
+            width: 500px;
+            /* Increased the width of the "Assistents Virtuals" card */
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+            cursor: pointer;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .Especialitzat:hover {
+            transform: scale(1.05);
+        }
+
+        .Especialitzat img {
+            height: auto;
+            width: 400px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: white;
+            color: #2063e9;
+            border-radius: 5px;
+            border: 1px solid #2063e9;
+            cursor: pointer;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+            width: 90%;
+        }
+
+        button:hover {
+            background-color: #86b4ff;
+            transform: scale(1.1);
+        }
+
+        /* Scroll to top button */
+        #scrollTopBtn {
+            bottom: 30px;
+            right: 30px;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #5591ff;
+        }
+
+        #ContenidoPrincipal #title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #ContenidoPrincipal {
+            width: 80%;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* Animación de entrada al hacer scroll */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="Portal.html">
+            <img id="LogoEmpresa" src="../../img/Logo_EchoMind-SinFondo.png" alt="">
+        </a>
+            <p id="title">EchoMind</p>
+            <nav>
+                <ul>
+                    <li><a href="./Portal.html">Inici</a></li>
+                    <li><a href="./QuiSom.html">Qui som?</a></li>
+                    <li><a href="./OnSom.html">On som?</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div id="ContenidoPrincipal">
+        <p id="subtitle" style="padding-bottom: 20px;">Que Fem?</p>
+        <p>La nostra empresa s'especialitza en crear utilitztas/eines informàtiques que barrejen les utilitats humanes
+            com la veu o l'inteligencia humana, amb la informatica.</p>
+        <p>Al que ens dediquem sobre tot, és a ajudar a les persones, a controlar un equip informatic molt més senzill,
+            eficient i automatitzat.</p>
+        <p>Més endavant, voldrem afegir als projectes que tenim Intel·ligència Artificial. Ja que seria una manera
+            d'automatitzar tasques més ràpides i tindre interaccions amb els clients.</p>
+        <p id="title">Especialitzacions</p>
+        <div id="Especialitzacions">
+            <div class="Especialitzat">
+                <h1>Assitents Virtuals</h1>
+                <p style="font-weight: bold;">El primer projecte que hem creat es Oria. Aquest assitent virtual està
+                    pensat sobre tot per a persones amb dificultats físiques. Amb aquest assistent tens una manera de
+                    controlar el teu ordinador amb la veu. Es capaç de obrir navegadors, cercar dins qualsevol pàgina
+                    web o tasques com pujar i baixar el volum del teu equip.</p>
+                <img style="padding-top: 15px;" src="../../img/Logo_Oria.png" alt="Oria">
+                <a href="./Oria.html"><button type="submit">Més Informació</button></a>
+            </div>
+        </div>
+    </div>
+    <button style=" background-color: #2063e9; display: right; width: 60px; justify-content: right;" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+    <footer>
+        <p>© 2025 EchoMind - Tots els drets reservats</p>
+    </footer>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
