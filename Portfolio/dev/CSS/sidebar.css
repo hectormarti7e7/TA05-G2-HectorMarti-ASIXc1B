@@ -1,0 +1,61 @@
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botón */
+    .open-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0; /* cerrado por defecto */
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ddd;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+      color: #fff;
+    }
+
+    /* Botón de cerrar dentro del menú */
+    .sidebar .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 25px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Contenido principal */
+    .content {
+      padding: 20px;
+    }
