@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Hector M</title>
-    <link rel="stylesheet" href="../CSS/Style.css">
-    <link rel="stylesheet" href="../CSS/Index.css">
+    <link rel="stylesheet" href="Portfolio/dev/CSS/sidebar.css">
+    <link rel="stylesheet" href="Portfolio/dev/CSS/Style.css">
+    <link rel="stylesheet" href="Portfolio/dev/CSS/Index.css">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
             <div id="menu-container">
-P
+                <button id="menuBtn">☰</button>
+                <nav class="closed" id="sideMenu">
+                    <ul>
+                        <li><a href="Portfolio/dev/HTML/Projectes/EchoMindOria.html">Oria - EchoMind</a></li>
+                        <li><a href="Portfolio/dev/HTML/Projectes/TechSwap.html">TechSwap</a></li>
+                        <li><a href="Portfolio/dev/HTML/ProjectList.html">Projects List</a></li>
+                    </ul>
+                </nav>
             </div>
             <h1 class="header-title">Portfolio</h1>
         </div>
@@ -25,15 +33,15 @@ P
         </p>
         <h2 class="projects-title">Projects</h2>
         <div class="projects-row">
-            <a href="Projectes/EchoMindOria.html">
+            <a href="Portfolio/dev/HTML/Projectes/EchoMindOria.html">
                 <div class="project">
-                    <img src="../../img/Logo_EchoMind-SinFondo.png" alt="Proyecto 1" class="project-img">
+                    <img src="Portfolio/img/Logo_EchoMind-SinFondo.png" alt="Proyecto 1" class="project-img">
                     <p class="project-name">EchoMind - Oria</p>
                 </div>
             </a>
-            <a href="Projectes/TechSwap.html">
+            <a href="Portfolio/dev/HTML/Projectes/TechSwap.html">
                 <div class="project">
-                    <img src="../../img/Logo_TechSwap.png" alt="Proyecto 2" class="project-img">
+                    <img src="Portfolio/img/Logo_TechSwap.png" alt="Proyecto 2" class="project-img">
                     <p class="project-name">TechSwap</p>
                 </div>
             </a>
@@ -45,5 +53,6 @@ P
         </a>
     </div>
     <footer><p>© 2025 - All right reserveds  - hector.marti.7e7@itb.cat</p></footer>
+    <script src="Portfolio/dev/JS/sidebar.js"></script>
 </body>
 </html>

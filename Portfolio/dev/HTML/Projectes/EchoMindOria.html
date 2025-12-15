@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>EchoMind - Oria</title>
+    <link rel="stylesheet" href="../../CSS/sidebar.css">
     <link rel="stylesheet" href="../../CSS/Style.css">
     <link rel="stylesheet" href="../../CSS/Pagines.css" >
 </head>
 <body>
-    <script src="../../JS/CardFlip.js"></script>
     <header class="header">
         <div class="header-content">
-            <span class="header-menu-icon">
-                <img src=""  class="header-avatar">
-            </span>
+            <div id="menu-container">
+                <button id="menuBtn">☰</button>
+                <nav class="closed" id="sideMenu">
+                    <ul>
+                        <li><a href="../../../../index.html">Inici</a></li>
+                        <li><a href="TechSwap.html">TechSwap</a></li>
+                        <li><a href="../../HTML/ProjectList.html">Projects List</a></li>
+                    </ul>
+                </nav>
+            </div>
             <h1 class="header-title">EchoMind - Oria</h1>
         </div>
     </header>
@@ -53,5 +60,7 @@
      </a>
 
     <footer><p>© 2025 - All right reserveds  - hector.marti.7e7@itb.cat</p></footer>
+    <script src="../../JS/sidebar.js"></script>
+    <script src="../../JS/CardFlip.js"></script>
 </body>
 </html>
