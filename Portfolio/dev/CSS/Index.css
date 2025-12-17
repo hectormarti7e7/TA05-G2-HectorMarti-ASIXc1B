@@ -1,106 +1,140 @@
-        body {
-        margin: 0;
-        padding: 0;
-        background: #f0f2f7;
-        font-family: 'Segoe UI', Arial, sans-serif;
-        color: #222;
-        }
+/* --- ANIMACIÓN DE ENTRADA (FADE IN) --- */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f0f2f7;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    opacity: 0; /* Controlado por JS */
+    transition: opacity 0.5s ease-in-out;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 24px auto;
-            background: #f0f2f7;
-            padding: 40px 32px;
-            box-sizing: border-box;
-        }
+body.fade-in {
+    opacity: 1;
+}
 
-        .title {
-            font-size: 55px;
-            font-weight: bold;
-            color: #0061fd;
-            margin-bottom: 0;
-        }
+body.fade-out {
+    opacity: 0 !important;
+}
 
-        .subtitle {
-            font-size: 22px;
-            font-weight: bold;
-            color: #0061fd;
-            margin: 10px 0 0 0;
-        }
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+    max-width: 900px;
+    margin: 24px auto;
+    background: #f0f2f7;
+    padding: 40px 32px;
+    box-sizing: border-box;
+}
 
-        .section-title {
-            font-size: 30px;
-            font-weight: bold;
-            color: #0061fd;
-            margin: 30px 0 10px 0;
-        }
+/* --- TEXTOS Y TÍTULOS --- */
+.title {
+    font-size: 55px;
+    font-weight: bold;
+    color: #0061fd;
+    margin-bottom: 0;
+}
 
-        .about-text {
-            font-size: 16px;
-            color: #0061fd;
-            margin-bottom: 30px;
-        }
+.subtitle, .section-title, .projects-title {
+    color: #0061fd;
+    font-weight: bold;
+}
 
-        .projects-title {
-            font-size: 32px;
-            font-weight: bold;
-            color: #0061fd;
-            margin: 40px 0 22px 0;
-        }
+.subtitle { font-size: 22px; margin: 10px 0 0 0; }
+.section-title { font-size: 30px; margin: 30px 0 10px 0; }
+.projects-title { font-size: 32px; margin: 40px 0 22px 0; }
 
-        .projects-row {
-            display: flex;
-            gap: 40px;
-            margin-bottom: 32px;
-            justify-content: center;
-        }
-        .projects-row a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .project {
-            background: #f0f2f7;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            width: 320px;
-            padding-bottom: 18px;
-            text-align: left;
-        }
+.about-text {
+    font-size: 16px;
+    color: #0061fd;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
 
-        .project-img {
-            width: 320px;
-            height: 270px;
-            object-fit: cover;
-            border-radius: 8px 8px 0 0;
-            display: block;
-        }
+/* --- SECCIÓN DE PROYECTOS (DISTRIBUCIÓN 2x2) --- */
+.projects-row {
+    display: flex;
+    flex-wrap: wrap;       /* Permite saltar de línea */
+    gap: 25px;            /* Espacio entre tarjetas */
+    justify-content: center;
+    margin-bottom: 32px;
+}
 
-        .project-name {
-            font-size: 15px;
-            font-weight: bold;
-            color: #0061fd;
-            margin-top: 12px;
-            margin-left: 10px;
-        }
+.projects-row a {
+    text-decoration: none;
+    color: inherit;
+    /* Ocupa el 50% del ancho menos el espacio del gap */
+    flex: 0 1 calc(50% - 25px);
+    min-width: 300px;      /* Se vuelve 1 columna en móviles pequeños */
+}
 
-        .contact-row {
-            text-align: center;
-        }
+.project {
+    background: #f0f2f7;
+    border-radius: 12px;
+    width: 100%;
+    padding-bottom: 18px;
+    text-align: left;
+    overflow: hidden;
 
-        .contact-btn {
-            background: #0061fd;
-            color: #fff;
-            border: none;
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 24px;
-            padding: 14px 32px;
-            cursor: pointer;
-            margin-top: 12px;
-            transition: background 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-        }
+    /* Sombra base sutil */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
-        .contact-btn:hover {
-            background: #1558d6;
-        }
+/* Efecto elevar y sombrear al pasar el ratón */
+.project:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0, 97, 253, 0.15);
+}
+
+/* Ajuste de tamaño de imagen */
+.project-img {
+    width: 100%;
+    height: 330px; /* Altura optimizada para el diseño 2x2 */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-img {
+    transform: scale(1.03);
+}
+
+.project-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0061fd;
+    margin: 15px 0 0 15px;
+}
+
+/* --- BOTÓN DE CONTACTO --- */
+.contact-row {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-btn {
+    background: #0061fd;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 24px;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 97, 253, 0.2);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 97, 253, 0.3);
+    filter: brightness(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: white;
+}

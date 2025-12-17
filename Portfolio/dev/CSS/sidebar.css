@@ -1,24 +1,31 @@
+/* Estilos base del cuerpo para evitar saltos */
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-#menu-container {
-  /* Buit per defecte */
-}
-
+/* Botón de activación (Hamburguesa) */
 #menuBtn {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
   font-size: 28px;
   background: #0040ff;
+  border-radius: 8px;
+  padding: 5px 12px;
   border: none;
   color: white;
   cursor: pointer;
   z-index: 1001;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+#menuBtn:hover {
+  background: #0030cc;
+  transform: scale(1.1); /* Ligero pulso al pasar el ratón */
+}
+
+/* Panel del Menú Lateral */
 #sideMenu {
   position: fixed;
   top: 0;
@@ -26,27 +33,59 @@ body {
   width: 250px;
   height: 100vh;
   background-color: #0040ff;
-  padding-top: 50px;
+  padding-top: 70px; /* Espacio para que no choque con el botón */
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   z-index: 1000;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.1); /* Sombra muy sutil solo en el borde del panel */
 }
 
 #sideMenu.open {
   transform: translateX(0);
 }
 
+/* Lista de navegación */
 #sideMenu ul {
   list-style: none;
-  padding-left: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 #sideMenu li {
-  margin: 20px 0;
+  margin: 0; /* Quitamos margen para que el área clickable sea completa */
 }
 
+/* Efecto en los Enlaces (Hover) */
 #sideMenu a {
+  display: block;
   color: white;
   text-decoration: none;
   font-size: 18px;
+  padding: 15px 25px;
+  transition: all 0.3s ease; /* Transición para el movimiento y color */
+  position: relative;
+  left: 0;
+}
+
+#sideMenu a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo suave al pasar el ratón */
+  padding-left: 35px; /* Efecto de "empuje" hacia la derecha */
+  color: #cce0ff; /* Cambio de tono de azul a uno más claro */
+}
+
+/* Indicador visual opcional (una rayita blanca al hacer hover) */
+#sideMenu a::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background-color: white;
+  transition: height 0.3s ease;
+}
+
+#sideMenu a:hover::before {
+  height: 20px; /* Aparece la línea al hacer hover */
 }

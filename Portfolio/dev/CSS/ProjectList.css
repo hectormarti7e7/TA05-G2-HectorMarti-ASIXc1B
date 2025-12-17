@@ -1,0 +1,73 @@
+/* Configuración del Contenido Principal (Main) */
+body {
+    background-color: #ffffff; /* Fondo blanco pedido */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* La lista de proyectos */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+/* Estilo de las "Tarjetas" de proyectos */
+.project-list li a {
+    display: block;
+    padding: 20px;
+    background-color: #f8f9fa; /* Gris muy claro para contraste */
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón: usa tu azul #0040ff */
+.project-list li a:hover {
+    border-color: #0040ff;
+    color: #0040ff;
+    background-color: #f0f4ff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 64, 255, 0.1);
+}
+
+/* Botón "Volver Arriba" */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #0040ff; /* Tu azul */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: none; /* Se activa con JS */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 99;
+}
+
+#backToTop:hover {
+    background-color: #0033cc; /* Un azul un poco más oscuro al presionar */
+    transform: scale(1.1);
+}
+
+/* Ajustes mínimos para asegurar que el header/footer se vean bien */
+header, footer {
+    background-color: #0040ff;
+    color: white;
+}
