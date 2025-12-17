@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gràcies per instalar</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+    <style>
+        /* Estilos base originales + idiomas */
+        #ContenidoPrincipal {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        /* Estilo para ambos títulos con rayita azul debajo */
+        #subtitle {
+            position: relative;
+            font-weight: 600;
+            font-size: 1.4em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .underline-blue {
+            position: relative;
+        }
+
+        .underline-blue:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+
+        /* Estilo para el título del manual sin rayita ni color azul */
+        #manual-title {
+            font-weight: 600;
+            font-size: 1.4em;
+            margin: 40px 0 30px 0;
+            color: black;
+            position: static;
+            /* sin posicionamiento relativo */
+            text-align: center;
+        }
+
+        #Descarregar-Oria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        #Descarregar-Oria a.button-download {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+
+        #Descarregar-Oria a.button-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
+        }
+
+        .download-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            max-width: 350px;
+        }
+
+        .hash-box {
+            background: #f4f6f8;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.85em;
+            color: #2c3e50;
+            word-break: break-all;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .copy-icon {
+            cursor: pointer;
+            font-size: 1em;
+            color: #3498db;
+            transition: color 0.2s ease;
+        }
+
+        .copy-icon:hover {
+            color: #2c3e50;
+        }
+
+        .steps-wrapper {
+            counter-reset: step-counter;
+            margin: 40px 0;
+        }
+
+        .step {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 60px;
+            min-height: 40px;
+        }
+
+        .step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+        }
+
+        .step-content {
+            padding-top: 8px;
+            line-height: 1.6;
+        }
+
+        .command {
+            display: block;
+            background: #f8f9fa;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            margin: 15px 0 25px 20px;
+            border-left: 4px solid #3498db;
+            color: #2c3e50;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .command:before {
+            content: "$";
+            color: #7f8c8d;
+            margin-right: 10px;
+        }
+
+        .contact-note {
+            background: #fff5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border-left: 4px solid #e74c3c;
+            font-size: 0.95em;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-note strong {
+            color: #e74c3c;
+        }
+
+        .language-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .lang-switcher {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            /* Más cerca */
+            width: 80px;
+        }
+
+        .next-lang-label {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #3498db;
+            user-select: none;
+            margin-bottom: 2px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #3498db;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .manual {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .manual.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="Portal.html">
+            <img id="LogoEmpresa" src="Logo_EchoMind-SinFondo.png" alt="Logo EchoMind" />
+        </a>
+        <p id="title">EchoMind</p>
+        <nav>
+            <ul>
+                <li><a href="Portal.html">Inici</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="ContenidoPrincipal">
+        <p id="subtitle">Descarregar Oria</p>
+        <div id="Descarregar-Oria">
+            <div class="download-block">
+                <a href="https://mega.nz/file/aJYA1T6Y#X7EWOdEBaHIlID0y2dAbZaIu37aX2HESgdWvd4IFqlM"
+                    class="button-download">Oria Esp</a>
+                <div class="hash-box">
+                    <span id="hash-esp">SHA-256: 7658f0fd341236bb11055328158e21e1997e3a2e562195c83b1843f29dddfb03</span>
+                    <span class="copy-icon" onclick="copyHash('hash-esp')">📋</span>
+                </div>
+            </div>
+            <div class="download-block">
+                <a href="https://mega.nz/file/6EBRxa5D#_KCDIzCRGpVVDfFrYwWb2WjYvek7k0G0hrt_I0v2hKs"
+                    class="button-download">Oria Eng</a>
+                <div class="hash-box">
+                    <span id="hash-eng">SHA-256: 22b95e817b7814ac464e45624b2e9cc66c12338c5bb06c9837db1f9299a7ae69</span>
+                    <span class="copy-icon" onclick="copyHash('hash-eng')">📋</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="language-controls">
+            <div class="lang-switcher">
+                <p class="next-lang-label" id="prev-lang-label">English</p>
+                <button class="lang-btn" onclick="changeLang(-1)">⬅️</button>
+            </div>
+
+            <p id="manual-title">Manual Instal·lació Oria</p>
+
+            <div class="lang-switcher">
+                <p class="next-lang-label" id="next-lang-label">Español</p>
+                <button class="lang-btn" onclick="changeLang(1)">➡️</button>
+            </div>
+        </div>
+
+        <!-- Manual en catalán -->
+        <div class="manual active" id="manual-ca">
+            <p>Per poder utilitzar Oria has de fer diferents passos pel correcte funcionament.</p>
+            <div class="steps-wrapper">
+                <div class="step">
+                    <div class="step-content">Primer de tot, després de descarregar Oria, has d'anar al explorador
+                        d'arxius (recomenem moure els fitxers descarregats fora del directori "Descarregues", per més
+                        comoditat), has de descomprimir l'arxiu.</div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Has d'entrar a la carpeta Oria, podras veure diferents fitxers amb
+                        diferens noms, has d'obrir la terminal en el directori on estas, amb click dret, podras veure
+                        una opció d'obrir en la terminal.</div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Quan estiguis dins de la terminal has de canviar els permisos d'execució
+                        del script que fa l'instalació per poder fer funcionar Oria, hauras de posar la següent comanda:
+                        <div class="command">chmod +x instalar.sh</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Per ultim has d'executar l'script per poder fer funcionar Oria <div
+                            class="command">./instalar.sh</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Ara Oria ja esta dins del menú d'aplicacions, ja pots iniciar-lo com
+                        qualsevol aplicació.</div>
+                </div>
+            </div>
+            <div class="contact-note">Si després d'aquest passos no has pogut iniciar Oria, contacta amb nosaltres en la
+                primera pàgina o envia un mail a aquest correu: <strong>servei-al-client@oria.com</strong></div>
+        </div>
+
+        <!-- Español -->
+        <div class="manual" id="manual-es">
+            <p>Para poder utilizar Oria debes realizar varios pasos para su correcto funcionamiento.</p>
+            <div class="steps-wrapper">
+                <div class="step">
+                    <div class="step-content">Primero, después de descargar Oria, ve al explorador de archivos
+                        (recomendamos mover los archivos descargados fuera del directorio "Descargas", para más
+                        comodidad), y descomprime el archivo.</div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Entra a la carpeta Oria, verás varios archivos con diferentes nombres,
+                        abre la terminal en el directorio donde estás, con clic derecho podrás ver la opción para abrir
+                        la terminal.</div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Cuando estés dentro de la terminal debes cambiar los permisos de ejecución
+                        del script que realiza la instalación para poder usar Oria, tienes que escribir el siguiente
+                        comando: <div class="command">chmod +x instalar.sh</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Por último, ejecuta el script para instalar Oria: <div class="command">
+                            ./instalar.sh</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Oria ahora estará disponible en el menú de aplicaciones, ya puedes
+                        iniciarlo como cualquier aplicación.</div>
+                </div>
+            </div>
+            <div class="contact-note">Si después de estos pasos no has podido iniciar Oria, contacta con nosotros desde
+                la primera página o envía un correo a este mail: <strong>servei-al-client@oria.com</strong></div>
+        </div>
+
+        <!-- English -->
+        <div class="manual" id="manual-en">
+            <p>To use Oria, you must follow several steps for correct operation.</p>
+            <div class="steps-wrapper">
+                <div class="step">
+                    <div class="step-content">First, after downloading Oria, go to the file explorer (we recommend
+                        moving the downloaded files out of the "Downloads" directory for convenience), and unzip the
+                        file.</div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Enter the Oria folder, you will see different files with different names,
+                        open the terminal in the directory where you are, with right click you can see an option to open
+                        the terminal.</div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Once inside the terminal, you must change the execution permissions of the
+                        install script to make Oria work, you must write the following command: <div class="command">
+                            chmod +x instalar.sh</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Finally, execute the script to install Oria: <div class="command">
+                            ./instalar.sh</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">Oria is now in the applications menu, you can start it like any other
+                        application.</div>
+                </div>
+            </div>
+            <div class="contact-note">If after these steps you cannot start Oria, contact us from the first page or send
+                an email to: <strong>servei-al-client@oria.com</strong></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 EchoMind - Tots els drets reservats</p>
+    </footer>
+
+    <script>
+        let currentLang = 0;
+        const manuals = document.querySelectorAll('.manual');
+        const manualTitle = document.getElementById('manual-title');
+        const nextLangLabel = document.getElementById('next-lang-label');
+        const prevLangLabel = document.getElementById('prev-lang-label');
+
+        const titles = [
+            "Manual Instal·lació Oria", // Català
+            "Manual Instalación Oria", // Español
+            "Oria Installation Manual", // English
+        ];
+
+        const langNames = [
+            ["Español", "English"],    // when in Català: next=Español, prev=English
+            ["English", "Català"],     // when in Español: next=English, prev=Català
+            ["Català", "Español"],     // when in English: next=Català, prev=Español
+        ];
+
+        function changeLang(direction) {
+            manuals[currentLang].classList.remove('active');
+            currentLang = (currentLang + direction + manuals.length) % manuals.length;
+            manuals[currentLang].classList.add('active');
+            manualTitle.textContent = titles[currentLang];
+
+            // Actualiza etiquetas de idiomas alrededor de flechas
+            nextLangLabel.textContent = langNames[currentLang][0];
+            prevLangLabel.textContent = langNames[currentLang][1];
+        }
+
+        function copyHash(id) {
+            const hashText = document.getElementById(id).innerText.replace('SHA-256: ', '');
+            navigator.clipboard.writeText(hashText).then(() => {
+                alert("Hash copiat al porta-retalls!");
+            });
+        }
+
+    </script>
+</body>
+
+</html>
