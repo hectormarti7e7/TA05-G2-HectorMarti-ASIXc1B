@@ -129,6 +129,7 @@ body.fade-out {
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    text-decoration: none;
     width: 100%;
 }
 
@@ -140,9 +141,9 @@ body.fade-out {
     padding: 15px 40px;
     font-size: 1.1em;
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 64, 255, 0.2);
 }
 
 .contact-btn:hover {
