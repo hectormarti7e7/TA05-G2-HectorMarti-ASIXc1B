@@ -33,9 +33,9 @@ body {
 
 /* Efecto al pasar el ratón: usa tu azul #0040ff */
 .project-list li a:hover {
-    border-color: #0040ff;
-    color: #0040ff;
-    background-color: #f0f4ff;
+    border-color: #24950E;
+    color: white;
+    background-color: #24950E;
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 64, 255, 0.1);
 }
@@ -47,7 +47,7 @@ body {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #0040ff; /* Tu azul */
+    background-color: #24950E; /* Tu azul */
     color: white;
     border: none;
     border-radius: 50%;
@@ -67,7 +67,3 @@ body {
 }
 
 /* Ajustes mínimos para asegurar que el header/footer se vean bien */
-header, footer {
-    background-color: #0040ff;
-    color: white;
-}

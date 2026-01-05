@@ -11,10 +11,32 @@ body {
 
 .header {
     width: calc(100% - 44px);
-    background-color: #0040ff;
+    background-color: #24950E;
     padding: 40px 20px;
     width: 100%;
     box-sizing: border-box;
+}
+
+#menuBtn {
+    background: none;      /* Quita el fondo del botón */
+    border: none;          /* Quita el borde */
+    cursor: pointer;       /* Hace que salga la mano al pasar el ratón */
+    padding: 0;            /* Quita espacios internos */
+    display: flex;         /* Ayuda a centrar la imagen */
+    align-items: center;
+}
+
+.btn-logo {
+    width: 60px;           /* Ajusta el ancho a tu gusto */
+    height: auto;          /* Mantiene la proporción */
+    transition: transform 0.3s; /* Por si quieres un efecto al pasar el ratón */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Opcional: un efecto sencillo cuando pases el ratón por encima */
+.btn-logo:hover {
+    transform: scale(1.1);
 }
 
 .header-content {
@@ -44,7 +66,7 @@ body {
 
 .header-title {
     color: #fff;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Impact', Charcoal, sans-serif;
     font-size: 62px;
     font-weight: 400;
     margin: 0;
@@ -53,8 +75,10 @@ body {
     letter-spacing: 1px;
 }
 
+
+
 footer {
-    background-color: #0040ff;
+    background-color: #24950E;
     color: white;
     text-align: center;
     padding: 40px 20px;

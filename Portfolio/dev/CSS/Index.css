@@ -30,13 +30,14 @@ body.fade-out {
 .title {
     font-size: 55px;
     font-weight: bold;
-    color: #0061fd;
+    color: #24950E;
     margin-bottom: 0;
 }
 
 .subtitle, .section-title, .projects-title {
-    color: #0061fd;
+    color:#24950E;
     font-weight: bold;
+    font-family: 'Impact', Charcoal, sans-serif;
 }
 
 .subtitle { font-size: 22px; margin: 10px 0 0 0; }
@@ -45,7 +46,7 @@ body.fade-out {
 
 .about-text {
     font-size: 16px;
-    color: #0061fd;
+    color: #24950E;
     margin-bottom: 30px;
     line-height: 1.6;
 }
@@ -103,7 +104,7 @@ body.fade-out {
 .project-name {
     font-size: 16px;
     font-weight: bold;
-    color: #0061fd;
+    color: #24950E;
     margin: 15px 0 0 15px;
 }
 
@@ -114,7 +115,7 @@ body.fade-out {
 }
 
 .contact-btn {
-    background: #0061fd;
+    background: #24950E;
     color: #fff;
     border: none;
     font-size: 16px;
@@ -130,11 +131,4 @@ body.fade-out {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 97, 253, 0.3);
     filter: brightness(1.1);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: white;
 }

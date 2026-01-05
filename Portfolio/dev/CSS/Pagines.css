@@ -95,12 +95,15 @@ body.fade-out {
 }
 
 .card-front {
-    background-color: #0040ff;
+    background-color: #24950E;
+    font-family: 'Roboto', sans-serif;
     color: white;
 }
 
+
+
 .card-back {
-    background-color: #0040ff; /* Un tono más oscuro para contraste */
+    background-color: #1C800A;
     color: white;
     transform: rotateY(180deg);
     text-align: center;
@@ -119,6 +122,7 @@ body.fade-out {
     color: white;
     font-size: 1.6em;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
     width: 100%;
     height: 100%;
@@ -134,13 +138,14 @@ body.fade-out {
 }
 
 .contact-btn {
-    background-color: #0040ff;
+    background-color: #24950E;
     color: white;
     border: none;
     border-radius: 30px;
     padding: 15px 40px;
     font-size: 1.1em;
     font-weight: 600;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -150,19 +155,4 @@ body.fade-out {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 64, 255, 0.4);
     filter: brightness(1.1);
-}
-
-/* --- Footer --- */
-footer {
-    background-color: #0040ff;
-    color: white;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: auto;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9em;
 }

@@ -10,7 +10,7 @@ body {
   top: 15px;
   left: 15px;
   font-size: 28px;
-  background: #0040ff;
+  background: #24950E;
   border-radius: 8px;
   padding: 5px 12px;
   border: none;
@@ -21,7 +21,7 @@ body {
 }
 
 #menuBtn:hover {
-  background: #0030cc;
+  background: #24950;
   transform: scale(1.1); /* Ligero pulso al pasar el ratón */
 }
 
@@ -32,7 +32,7 @@ body {
   left: 0;
   width: 250px;
   height: 100vh;
-  background-color: #0040ff;
+  background-color: #24950E;
   padding-top: 70px; /* Espacio para que no choque con el botón */
   transform: translateX(-100%);
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
