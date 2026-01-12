@@ -22,13 +22,7 @@ body.fade-out {
 @media (max-width: 768px) {
     .container {
         padding: 20px 10px;
-        align-items: center; /* Asegura que todo el contenido del body esté centrado */
-    }
-
-    .header-title {
-        font-size: 32px;
-        text-align: center;
-        width: 100%;
+        align-items: center;
     }
 
     .image-wrapper img {
