@@ -4,6 +4,13 @@
     padding: 0;
 }
 
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 35px; /* Reducimos el tamaño en móviles */
+        text-align: center;
+    }
+}
+
 body {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
