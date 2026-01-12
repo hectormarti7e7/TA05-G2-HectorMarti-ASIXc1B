@@ -6,7 +6,7 @@
 
 <@media (max-width: 768px) {
     .header-title {
-        font-size: 28px; /* Reducimos el tamaño en móviles */
+        font-size: 20px;
         text-align: center;
     }
 }

@@ -6,18 +6,6 @@ body.fade-out {
     opacity: 0 !important;
 }
 
-/* Tablet (Pantallas menores a 992px) */
-@media (max-width: 992px) {
-    .card-row {
-        gap: 20px;
-    }
-
-    .card-flip {
-        width: 45%;
-        height: 240px;
-    }
-}
-
 
 @media (max-width: 768px) {
     .container {
