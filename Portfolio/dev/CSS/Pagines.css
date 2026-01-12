@@ -34,20 +34,31 @@ body.fade-out {
     .contact-row {
         margin-top: 40px;
         display: flex;
-        justify-content: center; /* Centra el contenido flex horizontalmente */
+        justify-content: center;
         width: 100%;
         padding: 0;
-        text-decoration: none;
+        /* Quitamos subrayado del contenedor por si acaso */
+        text-decoration: none !important;
     }
 
     .contact-btn {
         width: 80%;
-        max-width: 300px; /* Evita que en pantallas medianas sea gigante */
+        max-width: 300px;
         text-align: center;
-        padding: 15px 0; /* Padding vertical, el horizontal lo da el ancho */
-        margin: 0 auto;  /* Margen automático a los lados para forzar posición central */
-        text-decoration: none;
-        display: block;  /* Cambiamos a block para que el margen auto funcione mejor */
+        padding: 15px 0;
+        margin: 0 auto;
+        display: block;
+        /* QUITAMOS EL SUBRAYADO AQUÍ */
+        text-decoration: none !important;
+        border: none;
+        outline: none;
+    }
+
+    /* Si tu HTML es <a class="contact-btn">...</a> añade esto: */
+    a.contact-btn,
+    a.contact-btn:hover,
+    a.contact-btn:visited {
+        text-decoration: none !important;
     }
 }
 
