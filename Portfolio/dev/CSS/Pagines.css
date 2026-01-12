@@ -37,6 +37,7 @@ body.fade-out {
         justify-content: center; /* Centra el contenido flex horizontalmente */
         width: 100%;
         padding: 0;
+        text-decoration: none;
     }
 
     .contact-btn {
@@ -45,6 +46,7 @@ body.fade-out {
         text-align: center;
         padding: 15px 0; /* Padding vertical, el horizontal lo da el ancho */
         margin: 0 auto;  /* Margen automático a los lados para forzar posición central */
+        text-decoration: none;
         display: block;  /* Cambiamos a block para que el margen auto funcione mejor */
     }
 }
