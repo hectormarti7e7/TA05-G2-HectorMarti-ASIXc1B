@@ -196,9 +196,15 @@ body.fade-out {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400; /* Peso normal para lectura fluida */
     line-height: 1.6;
-    text-decoration: none;
+    text-decoration: none !important;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
 }
 
 .contact-btn:hover {

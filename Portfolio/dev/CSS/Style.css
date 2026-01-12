@@ -4,13 +4,26 @@
     padding: 0;
 }
 
-<@media (max-width: 768px) {
+@media (max-width: 768px) {
     .header-title {
-        font-size: 20px;
+        font-size: 24px;
         text-align: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+        padding: 0;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    /* También revisamos el contenedor padre para asegurar que no lo desvíe */
+    .container {
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
->
+
 body {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
