@@ -66,9 +66,9 @@ body {
 
 .header-title {
     color: #fff;
-    font-family: 'Impact', Charcoal, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 62px;
-    font-weight: 400;
+    font-weight: 700;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -84,7 +84,9 @@ footer {
     padding: 40px 20px;
     margin-top: 60px;
     width: 100%;
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; /* Peso normal para lectura fluida */
+    line-height: 1.6;
 }
 
 .transition-layer {
