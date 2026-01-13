@@ -212,3 +212,8 @@ a, a:hover, a:active, a:focus {
     box-shadow: 0 8px 20px rgba(0, 64, 255, 0.4);
     filter: brightness(1.1);
 }
+
+.warning {
+    padding-top: 10px;
+    color: red;
+}
