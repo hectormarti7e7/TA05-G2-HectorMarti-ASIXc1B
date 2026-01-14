@@ -1,34 +1,42 @@
-# TA05: HTML-CSS-JS - Grup 2
+TA05: HTML-CSS-JS - Grup 2
+Aquest repositori conté el lliurament de la Tasca d'Aprenentatge 05 (TA05) corresponent al primer curs de ASIX (Administració de Sistemes Informàtics en Xarxa), secció B.
 
-Aquest repositori conté el lliurament de la **Tasca d'Aprenentatge 05 (TA05)** corresponent al primer curs de **ASIX (Administració de Sistemes Informàtics en Xarxa)**, secció B.
+👤 Informació de l'Autor
+Alumne: Héctor Martí
 
-## 👤 Informació de l'Autor
-* **Alumne:** Héctor Martí
-* **Curs:** 1r ASIX - B
-* **Grup:** G2
-* **Centre:** Institut Tecnologic de Barcelona
+Curs: 1r ASIX - B
 
----
+Grup: G2
 
-## 📝 Descripció del Projecte
-Dissenyar i desenvolupar un portfolio en una pàgina web, amb els diferents projectes que hem desenvolupant fins ara, utilitzant HTLM, CSS i JavaScript.
+Centre: Institut Tecnològic de Barcelona (ITB)
 
-**Objectius principals:**
-* [Objectiu 1, p. ex. Implementar un servidor web Apache]
-* [Objectiu 2, p. ex. Automatitzar la gestió d'usuaris mitjançant scripts]
-* [Objectiu 3, p. ex. Configurar el direccionament IP i el servei DHCP]
+📝 Descripció del Projecte
+L'objectiu d'aquest projecte és el disseny i desenvolupament d'una pàgina web tipus Portfolio personal. En aquesta web es recullen i mostren els diferents projectes i tasques realitzades durant el curs, servint com a carta de presentació digital.
 
-## 🛠️ Tecnologies i Eines
-* **Sistema Operatiu:** [p. ex. Ubuntu Server 22.04 / Debian]
-* **Llenguatges:** [p. ex. Bash, Python, SQL]
-* **Programari:** [p. ex. VirtualBox, Docker, Wireshark]
+Objectius principals:
 
-## 📁 Estructura del Repositori
-* `/src`: Fitxers de codi font o scripts.
-* `/docs`: Documentació tècnica, captures de pantalla o memòria en PDF.
-* `/config`: Fitxers de configuració modificats.
+Estructuració de continguts: Utilitzar HTML5 per definir l'esquelet i la jerarquia de la informació de la web.
 
-## 🚀 Instal·lació i Ús
-1. **Clona el repositori:**
-   ```bash
-   git clone [https://github.com/hectormarti7e7/TA05-G2-HectorMarti-ASIXc1B.git](https://github.com/hectormarti7e7/TA05-G2-HectorMarti-ASIXc1B.git)
+Disseny Visual i Responsivitat: Aplicar CSS3 per personalitzar l'aparença i assegurar que la web es visualitzi correctament en diferents dispositius (mòbil, tablet i escriptori).
+
+Interactivitat: Implementar funcionalitats dinàmiques mitjançant JavaScript per millorar l'experiència de l'usuari.
+
+🛠️ Tecnologies i Eines
+Llenguatges: HTML5, CSS3 i JavaScript.
+
+Editor de codi: Visual Studio Code.
+
+Control de versions: Git i GitHub per a la gestió del repositori.
+
+Recursos: Google Fonts per a la tipografia i FontAwesome per a les icones.
+
+📁 Estructura del Repositori
+index.html: Fitxer principal que conté l'estructura de la pàgina web del portfolio.
+
+css/: Carpeta que conté els fitxers d'estils (style.css) per al disseny visual.
+
+js/: Directori amb els scripts de JavaScript per a la lògica d'interacció.
+
+img/: Carpeta destinada a les imatges del projecte, captures dels treballs i logotips.
+
+README.md: Aquest fitxer amb la informació general del projecte.
