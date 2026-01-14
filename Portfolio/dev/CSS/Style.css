@@ -76,6 +76,7 @@ body {
 
 .header-avatar {
     width: 44px;
+    width: 44px;
     height: 44px;
     border-radius: 50%;
     object-fit: cover;
@@ -97,6 +98,8 @@ body {
 
 
 
+
+
 footer {
     background-color: #24950E;
     color: white;
@@ -107,6 +110,11 @@ footer {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400; /* Peso normal para lectura fluida */
     line-height: 1.6;
+}
+
+.footer p{
+    text-decoration: none;
+    color: white;
 }
 
 .transition-layer {

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Hector Marti - Estudiante de ASIX">
     <title>Portfolio Hector M</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
         <div class="header-content">
             <div id="menu-container">
                 <button id="menuBtn">
-                    <img src="Portfolio/img/Logo.png" alt="Menu" class="btn-logo">
+                    <img src="Portfolio/img/Logo.png" alt="Logo Portfolio" class="btn-logo">
                 </button>
                 <nav class="closed" id="sideMenu">
                     <ul>
@@ -31,41 +32,61 @@
         </div>
     </header>
 
-    <div class="container">
-        <h2 class="subtitle">Hector Marti</h2>
-        <h2 class="section-title">ABOUT ME</h2>
-        <p class="about-text">
-           I am currently a first-year student of the Higher Degree in Network Computer Systems Administration (ASIX) at the Institut Tecnologic de Barcelona, having previously completed my Vocational Training (CFGM) in the field. Throughout my academic journey, I have tackled a variety of projects, each representing a new challenge and a unique opportunity for both professional and personal growth. These experiences have allowed me to work across different areas of IT, including software development, systems administration, and network configuration. This portfolio serves as a dedicated space to document my progress and showcase the technical projects I have built along the way.
-        </p>
-        <h2 class="projects-title">Projects</h2>
-        <div class="projects-row">
-            <a href="Portfolio/dev/HTML/Projectes/EchoMindOria.html">
-                <div class="project">
-                    <img src="Portfolio/img/Logo_EchoMind-SinFondo.png" alt="Proyecto 1" class="project-img">
-                    <p class="project-name">EchoMind - Oria</p>
-                </div>
-            </a>
-            <a href="Portfolio/dev/HTML/Projectes/TechSwap.html">
-                <div class="project">
-                    <img src="Portfolio/img/Logo_TechSwap.png" alt="Proyecto 2" class="project-img">
-                    <p class="project-name">TechSwap</p>
-                </div>
-            </a>
-            <a href="Portfolio/dev/HTML/Projectes/Plataform.html">
-                <div class="project">
-                    <img src="Portfolio/img/PlataformGameFoto.png" alt="Proyecto 2" class="project-img">
-                    <p class="project-name">Plataform Game</p>
-                </div>
-            </a>
+    <main class="container">
 
-        </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdobdwvUXxBdfYly9z63_jWkZwMWWFsIrOLQ1MWTmCmNPdkWg/viewform?usp=publish-editor ">
-            <div class="contact-row">
-                <button class="contact-btn">Contact form</button>
+        <section id="about">
+            <h2 class="subtitle">Hector Marti</h2>
+            <h2 class="section-title">ABOUT ME</h2>
+            <article class="about-text">
+                <p>
+                   I am currently a first-year student of the Higher Degree in Network Computer Systems Administration (ASIX) at the Institut Tecnologic de Barcelona, having previously completed my Vocational Training (CFGM) in the field. Throughout my academic journey, I have tackled a variety of projects, each representing a new challenge and a unique opportunity for both professional and personal growth. These experiences have allowed me to work across different areas of IT, including software development, systems administration, and network configuration. This portfolio serves as a dedicated space to document my progress and showcase the technical projects I have built along the way.
+                </p>
+            </article>
+        </section>
+
+        <section id="projects">
+            <h2 class="projects-title">Projects</h2>
+            <div class="projects-row">
+                <article class="project-item">
+                    <a href="Portfolio/dev/HTML/Projectes/EchoMindOria.html">
+                        <div class="project">
+                            <img src="Portfolio/img/Logo_EchoMind-SinFondo.png" alt="Proyecto EchoMind" class="project-img">
+                            <p class="project-name">EchoMind - Oria</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="project-item">
+                    <a href="Portfolio/dev/HTML/Projectes/TechSwap.html">
+                        <div class="project">
+                            <img src="Portfolio/img/Logo_TechSwap.png" alt="Proyecto TechSwap" class="project-img">
+                            <p class="project-name">TechSwap</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="project-item">
+                    <a href="Portfolio/dev/HTML/Projectes/Plataform.html">
+                        <div class="project">
+                            <img src="Portfolio/img/PlataformGameFoto.png" alt="Proyecto Plataform Game" class="project-img">
+                            <p class="project-name">Plataform Game</p>
+                        </div>
+                    </a>
+                </article>
             </div>
-        </a>
-    </div>
-    <footer><p>© 2025 - All right reserveds  - hector.marti.7e7@itb.cat</p></footer>
+        </section>
+
+        <aside class="contact-section">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdobdwvUXxBdfYly9z63_jWkZwMWWFsIrOLQ1MWTmCmNPdkWg/viewform?usp=publish-editor">
+                <div class="contact-row">
+                    <button class="contact-btn">Contact form</button>
+                </div>
+            </a>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 - All rights reserved - <a href="mailto:hector.marti.7e7@itb.cat">hector.marti.7e7@itb.cat</a></p>
+    </footer>
+
     <script src="Portfolio/dev/JS/sidebar.js"></script>
     <script src="Portfolio/dev/JS/transition.js"></script>
 </body>
